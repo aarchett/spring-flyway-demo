@@ -50,7 +50,11 @@ spring:
         useServerPrepStmts: true
   flyway:
     enabled: true
-    baseline-on-migrate: false
+    baseline-on-migrate: true
+    baseline-version: 19
+    create-schemas: true
+    fail-on-missing-location: true
+    schemas: migrationdemo
     locations:
       - classpath:db/migration
       - classpath:db/callback
